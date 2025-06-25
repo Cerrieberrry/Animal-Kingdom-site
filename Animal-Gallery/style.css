@@ -1,4 +1,4 @@
-/* ========== VARIABLES ========== */
+/* -------- VARIABLES -------- */
 :root {
   --primary: #0B8457;       /* Deep Green */
   --secondary: #FFD700;     /* Golden Yellow */
@@ -11,7 +11,7 @@
   --font-body: 'Open Sans', sans-serif;
 }
 
-/* ========== BASE STYLES ========== */
+/* -------- BASE STYLES --------- */
 html {
   scroll-behavior: smooth;
 }
@@ -25,9 +25,14 @@ body {
   line-height: 1.6;
 }
 
-/* ========== NAVBAR ========== */
+/* --------- NAVBAR --------- */
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   display: flex;
+  gap: 1.5rem;
   justify-content: space-between;
   align-items: center;
   background-color: var(--primary);
@@ -51,8 +56,9 @@ body {
   font-family: var(--font-body);
   min-width: 180px;
 }
+ 
 
-/* ========== HERO SECTION ========== */
+/* ---------- HERO SECTION ---------*/
 .hero {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   height: 500px;
@@ -74,7 +80,9 @@ body {
   color: #fff;
   font-family: var(--font-heading);
   max-width: 90%;
+  animation: fadeInSlide 1s ease-in-out;
 }
+
 
 .hero h1 {
   font-size: clamp(1.8rem, 5vw, 2.5rem);
@@ -85,8 +93,32 @@ body {
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   margin: 0;
 }
+#randomAnimalBtn {
+  background-color: var(--secondary);
+  color: var(--accent);
+  padding: 0.8rem 1.4rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  box-shadow: 0 4px 10px var(--shadow);
+  transition: transform 0.2s ease, background 0.3s ease;
+  margin-top: 1rem;
+  animation: buttonClick 0.4s ease;
+  
+}
 
-/* ========== TRIVIA SECTION ========== */
+#randomAnimalBtn:hover {
+  transform: scale(1.05);
+  background-color: #e6c200;
+  animation: wiggle 0.3s ease-in-out;
+}
+
+
+
+/* -------- TRIVIA SECTION ------- */
 #trivia-section {
   padding: 2rem;
   text-align: center;
@@ -101,6 +133,19 @@ body {
   max-width: 500px;
   margin: 1rem auto;
 }
+
+#trivia-feedback {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #333;
+  font-size: 1rem;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  opacity: 1; 
+}
+
+
+
 .floating-btn{
   position: fixed;
   bottom: 20px;
@@ -120,6 +165,32 @@ body {
 .floating-btn:hover{
   background-color: #0B8457;
 }
+.next-arrow {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a9d8f; 
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border: none;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  
+}
+
+.next-arrow:hover {
+  background-color: #21867a;
+  transform: translateX(4px);
+}
 
 .options-container button {
   display: block;
@@ -133,21 +204,24 @@ body {
   font-family: var(--font-heading);
   transition: background 0.3s ease;
 }
+#options-container {
+  position: relative; 
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
 .options-container button:hover {
   background: #066a45;
 }
 
-#trivia-feedback {
-  font-weight: bold;
-  margin-top: 1rem;
-}
 
 .hidden {
   display: none;
 }
 
-/* ========== CARD STYLES ========== */
+/* ------- CARD STYLES --------- */
 .card {
   background: var(--card-bg);
   border-radius: 10px;
@@ -173,15 +247,18 @@ body {
 
 .animal-card p:first-of-type{
   font-style: normal;
-  color: #666;
   font-size: 0.95rem;
 }
-.animal-card p:first-of-type strong + * {
+
+em{
   font-style: italic;
+  color: #444;
+  font-family: var(--font-body);
+  font-weight: 500;
 }
   
 
-/* ========== GALLERY SECTION ========== */
+/* -------- GALLERY SECTION --------- */
 #gallery {
   padding: 3rem 1rem;
   background-color: var(--bg);
@@ -189,10 +266,11 @@ body {
 
 .gallery-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  justify-items: center; /* Ensures single card stays centered */
 }
 
 .animal-card {
@@ -202,6 +280,8 @@ body {
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   font-family: var(--font-body);
+  width: 100%;
+  max-width: 350px;
 }
 
 .animal-card:hover {
@@ -236,7 +316,7 @@ body {
   color: var(--secondary);
 }
 
-/* ========== BUTTON STYLES ========== */
+/* --------- BUTTON STYLES -------- */
 button,
 .cta-btn {
   background-color: var(--secondary);
@@ -263,11 +343,152 @@ button:focus-visible,
 }
 
 
-/* ========== FOOTER ========== */
+/* -------- FOOTER --------- */
 footer {
   background-color: var(--primary);
   color: white;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+}
+
+
+
+/* ----KEY FRAMES---- */
+
+/* Wiggle animation for Surprise Me button */
+@keyframes wiggle {
+  0%   { transform: rotate(0); }
+  25%  { transform: rotate(2deg); }
+  50%  { transform: rotate(-2deg); }
+  75%  { transform: rotate(2deg); }
+  100% { transform: rotate(0); }
+}
+
+/* Bounce + glow effect for highlighted animal cards */
+@keyframes bounceHighlight {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 transparent; }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--secondary);
+  }
+}
+
+/* Smooth fade-in and slide for hero text */
+.hero-text h1 {
+  animation: zoomIn 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Click effect for buttons (squish on click) */
+@keyframes buttonClick {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(0.92); }
+  100% { transform: scale(1); }
+}
+/* Fade animation class (used in JS) */
+.fade {
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ---------- MEDIA QUERIES --------- */
+
+/* 📱 Small Phones (≤ 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .hero-text {
+    padding: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  #navSearch,
+  #classFilter,
+  #dangerFilter,
+  #habitatFilter {
+    min-width: 100%;
+    margin: 0.4rem 0;
+  }
+
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+
+  .floating-btn {
+    bottom: 15px;
+    right: 15px;
+    padding: 0.7rem 1rem;
+  }
+}
+
+/* 📲 Tablets (481px–768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 2rem;
+  }
+
+  .hero-text {
+    padding: 2rem;
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 💻 Small Laptops (769px–1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-text {
+    max-width: 80%;
+  }
+}
+
+/* 🖥 Large Screens (1025px and up) */
+@media (min-width: 1025px) {
+  .gallery-container {
+    grid-template-columns: repeat(3, 1fr); /* You already wanted 3 per row */
+  }
+
+  .hero-text {
+    max-width: 700px;
+  }
 }

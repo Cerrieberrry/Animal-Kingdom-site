@@ -1,351 +1,345 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animal-Kingdom Gallery</title>
+    <title>Animal Kingdom Gallery</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">Animal Kingdom</div>
-        <input type="text" id="navSearch" placeholder="Search animals..."><!-- Filter by Class -->
-    <select id="classFilter">
-        <option value="">All Classes</option>
-        <option value="Mammalia">Mammal (Mammalia)</option>
-        <option value="Aves">Bird (Aves)</option>
-        <option value="Reptilia">Reptile (Reptilia)</option>
-        <option value="Pisces">Fish (Pisces)</option>
-        <option value="Amphibia">Amphibian (Amphibia)</option>
-        <option value="Insecta">Insect (Insecta)</option>
-        <option value="Arachnida">Arachnid (Arachnida)</option>
-        <option value="Crustacea">Crustacean (Crustacea)</option>
-    </select>
-
-    <!-- Filter by Danger Level -->
-    <select id="dangerFilter">
-        <option value="">All Danger Levels</option>
-        <option value="Low">Low</option>
-        <option value="Medium">Medium</option>
-        <option value="High">High</option>
-        <option value="Very-High">Very High</option>
-    </select>
-
-    <!-- Filter by Habitat -->
-    <select id="habitatFilter">
-        <option value="">All Habitats</option>
-        <option value="Forest">Forest</option>
-        <option value="Savannah">Savannah</option>
-        <option value="Desert">Desert</option>
-        <option value="Ocean">Ocean</option>
-        <option value="Freshwater">Freshwater</option>
-        <option value="Mountains">Mountains</option>
-        <option value="Grassland">Grassland</option>
-        <option value="Swamps">Swamps</option>
-        <option value="Woodlands">Woodlands</option>
-        <option value="Meadows">Meadows</option>
-        <option value="Garden">Garden</option>
-        <option value="Beaches">Beaches</option>
-        <option value="Tropical-forests">Tropical Forests</option>
-        <option value="Tropical-Rainforests">Tropical Rainforests</option>
-    </select>
+<header class="navbar">
+  <div class="logo">Animal Kingdom</div>
+  <input type="text" id="navSearch" placeholder="Search animals...">
+  <select id="classFilter">
+    <option value="">All Classes</option>
+    <option value="Mammalia">Mammalia (Mammal)</option>
+    <option value="Aves">Aves (Bird)</option>
+    <option value="Reptilia">Reptilia (Reptile)</option>
+    <option value="Pisces">Pisces (Fish)</option>
+    <option value="Amphibia">Amphibia (Amphibian)</option>
+    <option value="Insecta">Insecta (Insect)</option>
+    <option value="Arachnida">Arachnida (Arachnid)</option>
+    <option value="Crustacea">Crustacea (Crustacean)</option>
+  </select>
+  <select id="dangerFilter">
+    <option value="">All Danger Levels</option>
+    <option value="Low">Low</option>
+    <option value="Medium">Medium</option>
+    <option value="High">High</option>
+    <option value="Very-High">Very High</option>
+  </select>
+  <select id="habitatFilter">
+    <option value="">All Habitats</option>
+    <option value="Forests">Forest</option>
+    <option value="Savannah">Savannah</option>
+    <option value="Desert">Desert</option>
+    <option value="Oceans">Ocean</option>
+    <option value="Freshwaters">Freshwater</option>
+    <option value="Coral-Reefs">Coral-Reefs</option>
+    <option value="Grassland">Grassland</option>
+    <option value="Swamps">Swamps</option>
+    <option value="Woodlands">Woodlands</option>
+    <option value="Meadows">Meadows</option>
+    <option value="Rivers">Rivers</option>
+    <option value="Ponds">Ponds</option>
+    <option value="Beaches">Beaches</option>
+    <option value="Tropical-forests">Tropical Forests</option>
+    <option value="Tropical-Rainforests">Tropical Rainforests</option>
+  </select>
 </header>
 
 <section class="hero">
-    <div class="hero-text">
-        <h1>Explore the Animal Kingdom</h1>
-        <p>Discover animals by class, species and habitat</p>
-        <button id="randomAnimalBtn">Surprise Me!</button>
-    </div>
+  <div class="hero-text">
+    <h1>Explore the Animal Kingdom</h1>
+    <p>Discover animals by class, species and habitat</p>
+    <button id="randomAnimalBtn">Surprise Me!</button>
+  </div>
 </section>
 
-
-
-<!-- Gallery Section -->
 <section id="gallery" class="gallery-container">
-    <div class="animal-card" data-name="Lion" data-class="Mammalia" data-danger="High" data-habitat="Savannah">
-        <img src="images/lion.jpg" alt="Lion">
-        <h3>Lion</h3>
-        <p><strong>Scientific Name:</strong> Panthera leo</p>
-        <p><strong>Class:</strong> Mammalia</p>
-        <p><strong>Habitat:</strong> Savannah</p>
-        <p><strong>Danger Level:</strong> High</p>
-    </div>
-
-    <div class="animal-card" data-name="Elephant" data-class="Mammalia" data-danger="Medium" data-habitat="Forest">
-        <img src="images/elephant.jpg" alt="Elephant">
-        <h3>Elephant</h3>
-        <p><strong>Scientific Name:</strong> Loxodonta africana</p>
-        <p><strong>Class:</strong> Mammalia</p>
-        <p><strong>Habitat:</strong> Forest</p>
-        <p><strong>Danger Level:</strong> Medium</p>
-    </div>
-
-    <div class="animal-card"  data-name="Dolphin" data-class="Mammalia" data-danger="Low" data-habitat="Ocean">
-        <img src="images/dolphin.jpg" alt="Dolphin">
-        <h3>Dolphin</h3>
-        <p><strong>Scientific Name:</strong> Delphinus delphis</p>
-        <p><strong>Class:</strong> Mammalia</p>
-        <p><strong>Habitat:</strong> Ocean</p>
-        <p><strong>Danger Level:</strong> Low</p>
-    </div>
-
-    <div class="animal-card" data-name="Parrot" data-class="Aves" data-danger="Low" data-habitat="Forest">
-        <img src="images/parrot.jpg" alt="Parrot">
+  <div class="animal-card" data-name="Lion" data-class="Mammalia" data-danger="High" data-habitat="Savannah">
+    <img src="images/lion (3).jpg" alt="Lion">
+    <h3>Lion</h3>
+    <p><strong>Scientific Name:</strong> <em>Panthera leo</em></p>
+    <p><strong>Class:</strong> Mammalia</p>
+    <p><strong>Habitat:</strong> Savannah</p>
+    <p><strong>Danger Level:</strong> High</p>
+  </div>  
+  
+  <div class="animal-card" data-name="Elephant" data-class="Mammalia" data-danger="Medium" data-habitat="Forests">
+    <img src="images/Elephant (2).jpg" alt="Elephant">
+    <h3>Elephant</h3>
+    <p><strong>Scientific Name:</strong> <em>Loxodonta africana</em></p>
+    <p><strong>Class:</strong> Mammalia</p>
+    <p><strong>Habitat:</strong> Forest</p>
+    <p><strong>Danger Level:</strong> Medium</p>
+  </div>  
+  
+  <div class="animal-card" data-name="Dolphin" data-class="Mammalia" data-danger="Low" data-habitat="Oceans">
+    <img src="images/dolphin.jpg" alt="Dolphin">
+    <h3>Dolphin</h3>
+    <p><strong>Scientific Name:</strong><em>Delphinus delphis</em></p>
+    <p><strong>Class:</strong> Mammalia</p>
+    <p><strong>Habitat:</strong> Ocean</p>
+    <p><strong>Danger Level:</strong> Low</p>
+  </div>
+  <div class="animal-card" data-name="Parrot" data-class="Aves" data-danger="Low" data-habitat="Forests">
+        <img src="images/parrot (2).jpg" alt="Parrot">
         <h3>Parrot</h3>
-        <p><strong>Scientific Name:</strong> Psittaciformes</p>
+        <p><strong>Scientific Name:</strong> <em>Psittaciformes</em></p>
         <p><strong>Class:</strong> Aves</p>
         <p><strong>Habitat:</strong> Forest</p>
         <p><strong>Danger Level:</strong> Low</p>
     </div>
 
     <div class="animal-card" data-name="Ostrich" data-class="Aves" data-danger="High" data-habitat="Savannah">
-        <img src="images/ostrich.jpg" alt="Ostrich">
+        <img src="images/Ostrich (2).jpg" alt="Ostrich">
         <h3>Ostrich</h3>
-        <p><strong>Scientific Name:</strong> Struthio camelus</p>
+        <p><strong>Scientific Name:</strong> <em>Struthio camelus</em></p>
         <p><strong>Class:</strong> Aves</p>
         <p><strong>Habitat:</strong> Savannah</p>
         <p><strong>Danger Level:</strong> High</p>
     </div>
 
     <div class="animal-card" data-name="Falcon" data-class="Aves" data-danger="High" data-habitat="Cliffs">
-        <img src="images/falcon.jpg" alt="Falcon">
+        <img src="images/Falcon (2).jpg" alt="Falcon">
         <h3>Falcon</h3>
-        <p><strong>Scientific Name:</strong> Falco peregrinus</p>
+        <p><strong>Scientific Name:</strong> <em>Falco peregrinus</em></p>
         <p><strong>Class:</strong> Aves</p>
         <p><strong>Habitat:</strong> Cliffs</p>
         <p><strong>Danger Level:</strong> High</p>
     </div>
 
-<div class="animal-card" data-name="Cobra" data-class="Reptilia" data-danger="High" data-habitat="Forest">
-  <img src="images/cobra.jpg" alt="Cobra">
+<div class="animal-card" data-name="Cobra" data-class="Reptilia" data-danger="High" data-habitat="Forests">
+  <img src="images/Cobra (1).jpg" alt="Cobra">
   <h3>Cobra</h3>
-  <p><strong>Scientific Name:</strong> Naja naja</p>
+  <p><strong>Scientific Name:</strong> <em>Naja naja</em></p>
   <p><strong>Class:</strong> Reptilia</p>
   <p><strong>Habitat:</strong> Forest</p>
   <p><strong>Danger Level:</strong> High</p>
 </div>
 
-<div class="animal-card" data-name="Iguana" data-class="Reptilia" data-danger="Low" data-habitat="Rainforest">
-  <img src="images/iguana.jpg" alt="Iguana">
+<div class="animal-card" data-name="Iguana" data-class="Reptilia" data-danger="Low" data-habitat="Rain-forests">
+  <img src="images/Iguana (2).jpg" alt="Iguana">
   <h3>Iguana</h3>
-  <p><strong>Scientific Name:</strong> Iguana iguana</p>
+  <p><strong>Scientific Name:</strong> <em>Iguana iguana</em></p>
   <p><strong>Class:</strong> Reptilia</p>
   <p><strong>Habitat:</strong> Rainforest</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 
 <div class="animal-card" data-name="Crocodile" data-class="Reptilia" data-danger="High" data-habitat="Swamps">
-  <img src="images/crocodile.jpg" alt="Crocodile">
+  <img src="images/Crocodile (2).jpg" alt="Crocodile">
   <h3>Crocodile</h3>
-  <p><strong>Scientific Name:</strong> Crocodylus niloticus</p>
+  <p><strong>Scientific Name:</strong><em> Crocodylus niloticus</em></p>
   <p><strong>Class:</strong> Reptilia</p>
   <p><strong>Habitat:</strong> Swamps</p>
   <p><strong>Danger Level:</strong> High</p>
 </div>
 
-<div class="animal-card" data-name="Chameleon" data-class="Reptilia" data-danger="Low" data-habitat="Forest">
-  <img src="images/chameleon.jpg" alt="Chameleon">
+<div class="animal-card" data-name="Chameleon" data-class="Reptilia" data-danger="Low" data-habitat="Forests">
+  <img src="images/chameleon (1).jpg" alt="Chameleon">
   <h3>Chameleon</h3>
-  <p><strong>Scientific Name:</strong> Chamaeleonidae</p>
+  <p><strong>Scientific Name:</strong> <em>Chamaeleonidae</em></p>
   <p><strong>Class:</strong> Reptilia</p>
   <p><strong>Habitat:</strong> Forest</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 
-<div class="animal-card" data-name="Turtle" data-class="Reptilia" data-danger="Low" data-habitat="Freshwater">
-  <img src="images/turtle.jpg" alt="Turtle">
+<div class="animal-card" data-name="Turtle" data-class="Reptilia" data-danger="Low" data-habitat="Freshwaters">
+  <img src="images/Turtle (2).jpg" alt="Turtle">
   <h3>Turtle</h3>
-  <p><strong>Scientific Name:</strong> Testudines</p>
+  <p><strong>Scientific Name:</strong> <em>Testudines</em></p>
   <p><strong>Class:</strong> Reptilia</p>
   <p><strong>Habitat:</strong> Freshwater</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 
-<div class="animal-card" data-name="Shark" data-class="Pisces" data-danger="High" data-habitat="Ocean">
-  <img src="images/shark.jpg" alt="Shark">
+<div class="animal-card" data-name="Shark" data-class="Pisces" data-danger="High" data-habitat="Oceans">
+  <img src="images/Shark (2).jpg" alt="Shark">
   <h3>Shark</h3>
-  <p><strong>Scientific Name:</strong> Carcharodon carcharias</p>
+  <p><strong>Scientific Name:</strong> <em>Carcharodon carcharias</em></p>
   <p><strong>Class:</strong> Pisces</p>
   <p><strong>Habitat:</strong> Ocean</p>
   <p><strong>Danger Level:</strong> High</p>
 </div>
 
-<div class="animal-card" data-name="Clownfish" data-class="Pisces" data-danger="Low" data-habitat="Coral Reef">
+<div class="animal-card" data-name="Clownfish" data-class="Pisces" data-danger="Low" data-habitat="Coral-Reefs">
   <img src="images/clownfish.jpg" alt="Clownfish">
   <h3>Clownfish</h3>
-  <p><strong>Scientific Name:</strong> Amphiprioninae</p>
+  <p><strong>Scientific Name:</strong> <em>Amphiprioninae</em></p>
   <p><strong>Class:</strong> Pisces</p>
   <p><strong>Habitat:</strong> Coral Reef</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 
-<div class="animal-card" data-name="Mandarinfish" data-class="Pisces" data-danger="Low" data-habitat="Coral Reef">
-  <img src="images/mandarinfish.jpg" alt="Mandarinfish">
+<div class="animal-card" data-name="Mandarinfish" data-class="Pisces" data-danger="Low" data-habitat="Coral-Reefs">
+  <img src="images/Mandarin Fish.jpg" alt="Mandarinfish">
   <h3>Mandarinfish</h3>
-  <p><strong>Scientific Name:</strong> Synchiropus splendidus</p>
+  <p><strong>Scientific Name:</strong> <em>Synchiropus splendidus</em></p>
   <p><strong>Class:</strong> Pisces</p>
   <p><strong>Habitat:</strong> Coral Reef</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 
 <div class="animal-card" data-name="Archerfish" data-class="Pisces" data-danger="Low" data-habitat="Mangroves">
-  <img src="images/archerfish.jpg" alt="Archerfish">
+  <img src="images/Archerfish (2).jpg" alt="Archerfish">
   <h3>Archerfish</h3>
-  <p><strong>Scientific Name:</strong> Toxotes jaculatrix</p>
+  <p><strong>Scientific Name:</strong> <em>Toxotes jaculatrix</em></p>
   <p><strong>Class:</strong> Pisces</p>
   <p><strong>Habitat:</strong> Mangroves</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 
-<div class="animal-card" data-name="Electric Eel" data-class="Pisces" data-danger="High" data-habitat="Freshwater">
-  <img src="images/eel.jpg" alt="Electric Eel">
+<div class="animal-card" data-name="Electric Eel" data-class="Pisces" data-danger="High" data-habitat="Freshwaters">
+  <img src="images/Electric Eel.jpg" alt="Electric Eel">
   <h3>Electric Eel</h3>
-  <p><strong>Scientific Name:</strong> Electrophorus electricus</p>
+  <p><strong>Scientific Name:</strong> <em>Electrophorus electricus</em></p>
   <p><strong>Class:</strong> Pisces</p>
   <p><strong>Habitat:</strong> Freshwater</p>
   <p><strong>Danger Level:</strong> High</p>
 </div>
 
-<div class="animal-card" data-name="Goliath Tigerfish" data-class="Pisces" data-danger="High" data-habitat="Freshwater">
-  <img src="images/tigerfish.jpg" alt="Goliath Tigerfish">
+<div class="animal-card" data-name="Goliath Tigerfish" data-class="Pisces" data-danger="High" data-habitat="Freshwaters">
+  <img src="images/Goliath Tigerfish.jpg" alt="Goliath Tigerfish">
   <h3>Goliath Tigerfish</h3>
-  <p><strong>Scientific Name:</strong> Hydrocynus goliath</p>
+  <p><strong>Scientific Name:</strong> <em>Hydrocynus goliath</em></p>
   <p><strong>Class:</strong> Pisces</p>
   <p><strong>Habitat:</strong> Freshwater</p>
   <p><strong>Danger Level:</strong> High</p>
 </div>
 
-<div class="animal-card" data-name="Stonefish" data-class="Pisces" data-danger="Very High" data-habitat="Coral Reef">
+<div class="animal-card" data-name="Stonefish" data-class="Pisces" data-danger="Very-High" data-habitat="Coral-Reefs">
   <img src="images/stonefish.jpg" alt="Stonefish">
   <h3>Stonefish</h3>
-  <p><strong>Scientific Name:</strong> Synanceia verrucosa</p>
+  <p><strong>Scientific Name:</strong> <em>Synanceia verrucosa</em></p>
   <p><strong>Class:</strong> Pisces</p>
   <p><strong>Habitat:</strong> Coral Reef</p>
   <p><strong>Danger Level:</strong> Very High</p>
 </div>
 
 <div class="animal-card" data-name="African Bullfrog" data-class="Amphibia" data-danger="Medium" data-habitat="Savannah">
-  <img src="images/bullfrog.jpg" alt="African Bullfrog">
+  <img src="images/African bullfrog.jpg" alt="African Bullfrog">
   <h3>African Bullfrog</h3>
-  <p><strong>Scientific Name:</strong> Pyxicephalus adspersus</p>
+  <p><strong>Scientific Name:</strong><em>Pyxicephalus adspersus</em></p>
   <p><strong>Class:</strong> Amphibia</p>
   <p><strong>Habitat:</strong> Savannah</p>
   <p><strong>Danger Level:</strong> Medium</p>
 </div>
 
-<div class="animal-card" data-name="Red-eyed Tree Frog" data-class="Amphibia" data-danger="Low" data-habitat="Rainforest">
-  <img src="images/treefrog.jpg" alt="Red-eyed Tree Frog">
-  <h3>Red-eyed Tree Frog</h3>
-  <p><strong>Scientific Name:</strong> Agalychnis callidryas</p>
+<div class="animal-card" data-name="Cane Toad" data-class="Amphibia" data-danger="Medium" data-habitat="Grasslands">
+  <img src="images/Cane frog.jpg" alt="Cane Toad">
+  <h3>Cane Toad</h3>
+  <p><strong>Scientific Name:</strong> <em>Rhinella marina</em></p>
   <p><strong>Class:</strong> Amphibia</p>
-  <p><strong>Habitat:</strong> Rainforest</p>
-  <p><strong>Danger Level:</strong> Low</p>
+  <p><strong>Habitat:</strong> Grassland</p>
+  <p><strong>Danger Level:</strong> Medium</p>
 </div>
 
-<div class="animal-card" data-name="Axolotl" data-class="Amphibia" data-danger="Low" data-habitat="Freshwater">
+<div class="animal-card" data-name="Axolotl" data-class="Amphibia" data-danger="Low" data-habitat="Freshwaters">
   <img src="images/axolotl.jpg" alt="Axolotl">
   <h3>Axolotl</h3>
-  <p><strong>Scientific Name:</strong> Ambystoma mexicanum</p>
+  <p><strong>Scientific Name:</strong> <em>Ambystoma mexicanum</em></p>
   <p><strong>Class:</strong> Amphibia</p>
   <p><strong>Habitat:</strong> Freshwater</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 
-<div class="animal-card" data-name="Poison Dart Frog" data-class="Amphibia" data-danger="High" data-habitat="Rainforest">
+<div class="animal-card" data-name="Poison Dart Frog" data-class="Amphibia" data-danger="High" data-habitat="Rain-forests">
   <img src="images/poisonfrog.jpg" alt="Poison Dart Frog">
   <h3>Poison Dart Frog</h3>
-  <p><strong>Scientific Name:</strong> Dendrobates tinctorius</p>
+  <p><strong>Scientific Name:</strong> <em>Dendrobates tinctorius</em></p>
   <p><strong>Class:</strong> Amphibia</p>
   <p><strong>Habitat:</strong> Rainforest</p>
   <p><strong>Danger Level:</strong> High</p>
 </div>
 
 <div class="animal-card" data-name="Eastern Newt" data-class="Amphibia" data-danger="Low" data-habitat="Ponds">
-  <img src="images/newt.jpg" alt="Eastern Newt">
+  <img src="images/Eastern Newt.jpg" alt="Eastern Newt">
   <h3>Eastern Newt</h3>
-  <p><strong>Scientific Name:</strong> Notophthalmus viridescens</p>
+  <p><strong>Scientific Name:</strong><em> Notophthalmus viridescens</em></p>
   <p><strong>Class:</strong> Amphibia</p>
   <p><strong>Habitat:</strong> Ponds</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 
-<div class="animal-card" data-name="Goliath Frog" data-class="Amphibia" data-danger="Low" data-habitat="Rainforest">
-  <img src="images/goliathfrog.jpg" alt="Goliath Frog">
-  <h3>Goliath Frog</h3>
-  <p><strong>Scientific Name:</strong> Conraua goliath</p>
+<div class="animal-card" data-name="Common Caecilian" data-class="Amphibia" data-danger="Low" data-habitat="Tropical-Rainforests">
+  <img src="images/caecilian.jpg" alt="Common Caecilian">
+  <h3>Common Caecilian</h3>
+  <p><strong>Scientific Name:</strong> <em>Ichthyophis glutinosus</em></p>
   <p><strong>Class:</strong> Amphibia</p>
-  <p><strong>Habitat:</strong> Rainforest</p>
+  <p><strong>Habitat:</strong> Tropical Rainforests</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 
 <div class="animal-card" data-name="Hellbender Salamander" data-class="Amphibia" data-danger="Low" data-habitat="Rivers">
-  <img src="images/hellbender.jpg" alt="Hellbender Salamander">
+  <img src="images/Hellbender Salamander.jpg" alt="Hellbender Salamander">
   <h3>Hellbender Salamander</h3>
-  <p><strong>Scientific Name:</strong> Cryptobranchus alleganiensis</p>
+  <p><strong>Scientific Name:</strong> <em>Cryptobranchus alleganiensis</em></p>
   <p><strong>Class:</strong> Amphibia</p>
   <p><strong>Habitat:</strong> Rivers</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 <!-- INSECTA SECTION -->
 <div class="animal-card" data-name="Monarch Butterfly" data-class="Insecta" data-danger="Low" data-habitat="Meadows">
-  <img src="images/monarch_butterfly.jpg" alt="Monarch Butterfly">
+  <img src="images/Monarch Butterfly.jpg" alt="Monarch Butterfly">
   <h3>Monarch Butterfly</h3>
-  <p><strong>Scientific Name:</strong> Danaus plexippus</p>
+  <p><strong>Scientific Name:</strong> <em>Danaus plexippus</em></p>
   <p><strong>Class:</strong> Insecta</p>
   <p><strong>Habitat:</strong> Meadows</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 
-<div class="animal-card" data-name="Praying Mantis" data-class="Insecta" data-danger="Medium" data-habitat="Grassland">
-  <img src="images/praying_mantis.jpg" alt="Praying Mantis">
+<div class="animal-card" data-name="Praying Mantis" data-class="Insecta" data-danger="Medium" data-habitat="Grasslands">
+  <img src="images/Praying Mantis (2).jpg" alt="Praying Mantis">
   <h3>Praying Mantis</h3>
-  <p><strong>Scientific Name:</strong> Mantis religiosa</p>
+  <p><strong>Scientific Name:</strong> <em>Mantis religiosa</em></p>
   <p><strong>Class:</strong> Insecta</p>
   <p><strong>Habitat:</strong> Grassland</p>
   <p><strong>Danger Level:</strong> Medium</p>
 </div>
 
-<div class="animal-card" data-name="Honeybee" data-class="Insecta" data-danger="Medium" data-habitat="Farmland">
+<div class="animal-card" data-name="Honeybee" data-class="Insecta" data-danger="Medium" data-habitat="Farmlands">
   <img src="images/honeybee.jpg" alt="Honeybee">
   <h3>Honeybee</h3>
-  <p><strong>Scientific Name:</strong> Apis mellifera</p>
+  <p><strong>Scientific Name:</strong> <em>Apis mellifera</em></p>
   <p><strong>Class:</strong> Insecta</p>
   <p><strong>Habitat:</strong> Farmland</p>
   <p><strong>Danger Level:</strong> Medium</p>
 </div>
 
-<div class="animal-card" data-name="Atlas Moth" data-class="Insecta" data-danger="Low" data-habitat="Tropical Forests">
-  <img src="images/atlas_moth.jpg" alt="Atlas Moth">
+<div class="animal-card" data-name="Atlas Moth" data-class="Insecta" data-danger="Low" data-habitat="Tropical-Forests">
+  <img src="images/Atlas Moth (2).jpg" alt="Atlas Moth">
   <h3>Atlas Moth</h3>
-  <p><strong>Scientific Name:</strong> Attacus atlas</p>
+  <p><strong>Scientific Name:</strong> <em> Attacus atlas</em></p>
   <p><strong>Class:</strong> Insecta</p>
   <p><strong>Habitat:</strong> Tropical Forests</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 
-<div class="animal-card" data-name="Goliath Beetle" data-class="Insecta" data-danger="Low" data-habitat="Rainforests">
-  <img src="images/goliath_beetle.jpg" alt="Goliath Beetle">
+<div class="animal-card" data-name="Goliath Beetle" data-class="Insecta" data-danger="Low" data-habitat="Rain-forests">
+  <img src="images/Goliath Beetle.jpg" alt="Goliath Beetle">
   <h3>Goliath Beetle</h3>
-  <p><strong>Scientific Name:</strong> Goliathus goliatus</p>
+  <p><strong>Scientific Name:</strong> <em>Goliathus goliatus</em></p>
   <p><strong>Class:</strong> Insecta</p>
   <p><strong>Habitat:</strong> Rainforests</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 
 <div class="animal-card" data-name="Japanese Giant Hornet" data-class="Insecta" data-danger="High" data-habitat="Savannah">
-  <img src="images/japanese_hornet.jpg" alt="Japanese Giant Hornet">
+  <img src="images/Japanese Giant Hornet.jpg" alt="Japanese Giant Hornet">
   <h3>Japanese Giant Hornet</h3>
-  <p><strong>Scientific Name:</strong> Vespa mandarinia japonica</p>
+  <p><strong>Scientific Name:</strong> <em>Vespa mandarinia japonica</em></p>
   <p><strong>Class:</strong> Insecta</p>
   <p><strong>Habitat:</strong> Savannah</p>
   <p><strong>Danger Level:</strong> High</p>
 </div>
 
 <div class="animal-card" data-name="Antlion" data-class="Insecta" data-danger="Low" data-habitat="Forests">
-  <img src="images/antlion.jpg" alt="Antlion">
+  <img src="images/Antlion (1).jpg" alt="Antlion">
   <h3>Antlion</h3>
-  <p><strong>Scientific Name:</strong> Myrmeleontidae</p>
+  <p><strong>Scientific Name:</strong> <em>Myrmeleontidae</em></p>
   <p><strong>Class:</strong> Insecta</p>
   <p><strong>Habitat:</strong> Forests</p>
   <p><strong>Danger Level:</strong> Low</p>
@@ -353,9 +347,9 @@
 
 <!-- ARACHNIDA SECTION -->
 <div class="animal-card" data-name="black_Widow Spider" data-class="Arachnida" data-danger="High" data-habitat="Woodlands">
-  <img src="images/black_widow.jpg" alt="Black Widow Spider">
+  <img src="images/Black widow (2).jpg" alt="Black Widow Spider">
   <h3>Black Widow Spider</h3>
-  <p><strong>Scientific Name:</strong> Latrodectus mactans</p>
+  <p><strong>Scientific Name:</strong> <em>Latrodectus mactans</em></p>
   <p><strong>Class:</strong> Arachnida</p>
   <p><strong>Habitat:</strong> Woodlands</p>
   <p><strong>Danger Level:</strong> High</p>
@@ -364,34 +358,34 @@
 <div class="animal-card" data-name="Scorpion" data-class="Arachnida" data-danger="High" data-habitat="Grasslands">
   <img src="images/scorpion.jpg" alt="Scorpion">
   <h3>Scorpion</h3>
-  <p><strong>Scientific Name:</strong> Scorpiones</p>
+  <p><strong>Scientific Name:</strong> <em>Scorpiones</em></p>
   <p><strong>Class:</strong> Arachnida</p>
   <p><strong>Habitat:</strong> Grasslands / Deserts</p>
   <p><strong>Danger Level:</strong> High</p>
 </div>
 
 <div class="animal-card" data-name="Harvestman" data-class="Arachnida" data-danger="Low" data-habitat="Forests">
-  <img src="images/harvestman.jpg" alt="Harvestman">
+  <img src="images/Harvestman (Opiliones).jpg" alt="Harvestman">
   <h3>Harvestman</h3>
-  <p><strong>Scientific Name:</strong> Opiliones</p>
+  <p><strong>Scientific Name:</strong> <em>Opiliones</em></p>
   <p><strong>Class:</strong> Arachnida</p>
   <p><strong>Habitat:</strong> Forests</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 
 <div class="animal-card" data-name="Wolf_spider" data-class="Arachnida" data-danger="Medium" data-habitat="Grasslands">
-  <img src="images/wolf_spider.jpg" alt="Wolf Spider">
+  <img src="images/Wolf spider.jpg" alt="Wolf Spider">
   <h3>Wolf Spider</h3>
-  <p><strong>Scientific Name:</strong> Lycosidae</p>
+  <p><strong>Scientific Name:</strong> <em>Lycosidae</em></p>
   <p><strong>Class:</strong> Arachnida</p>
   <p><strong>Habitat:</strong> Grasslands</p>
   <p><strong>Danger Level:</strong> Medium</p>
 </div>
 
-<div class="animal-card" data-name="Tarantula" data-class="Arachnida" data-danger="Medium" data-habitat="Rainforests">
+<div class="animal-card" data-name="Tarantula" data-class="Arachnida" data-danger="Medium" data-habitat="Rain-forests">
   <img src="images/tarantula.jpg" alt="Tarantula">
   <h3>Tarantula</h3>
-  <p><strong>Scientific Name:</strong> Theraphosidae</p>
+  <p><strong>Scientific Name:</strong> <em>Theraphosidae</em></p>
   <p><strong>Class:</strong> Arachnida</p>
   <p><strong>Habitat:</strong> Rainforests</p>
   <p><strong>Danger Level:</strong> Medium</p>
@@ -400,7 +394,7 @@
 <div class="animal-card" data-name="Tick" data-class="Arachnida" data-danger="High" data-habitat="Forests">
   <img src="images/tick.jpg" alt="Tick">
   <h3>Tick</h3>
-  <p><strong>Scientific Name:</strong> Ixodida</p>
+  <p><strong>Scientific Name:</strong><em> Ixodida</em></p>
   <p><strong>Class:</strong> Arachnida</p>
   <p><strong>Habitat:</strong> Forests</p>
   <p><strong>Danger Level:</strong> High</p>
@@ -408,81 +402,76 @@
 
 <!-- CRUSTACEA SECTION -->
 <div class="animal-card" data-name="Blue Crab" data-class="Crustacea" data-danger="Low" data-habitat="Coastal Waters">
-  <img src="images/blue_crab.jpg" alt="Blue Crab">
+  <img src="images/Blue crab.jpg" alt="Blue Crab">
   <h3>Blue Crab</h3>
-  <p><strong>Scientific Name:</strong> Callinectes sapidus</p>
+  <p><strong>Scientific Name:</strong> <em>Callinectes sapidus</em></p>
   <p><strong>Class:</strong> Crustacea</p>
   <p><strong>Habitat:</strong> Coastal Waters</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 
-<div class="animal-card" data-name="Lobster" data-class="Crustacea" data-danger="Low" data-habitat="Ocean">
+<div class="animal-card" data-name="Lobster" data-class="Crustacea" data-danger="Low" data-habitat="Oceans">
   <img src="images/lobster.jpg" alt="Lobster">
   <h3>Lobster</h3>
-  <p><strong>Scientific Name:</strong> Nephropidae</p>
+  <p><strong>Scientific Name:</strong><em> Nephropidae</em></p>
   <p><strong>Class:</strong> Crustacea</p>
   <p><strong>Habitat:</strong> Ocean Floor</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 
-<div class="animal-card" data-name="Shrimp" data-class="Crustacea" data-danger="Low" data-habitat="Freshwater">
+<div class="animal-card" data-name="Shrimp" data-class="Crustacea" data-danger="Low" data-habitat="Freshwaters">
   <img src="images/shrimp.jpg" alt="Shrimp">
   <h3>Shrimp</h3>
-  <p><strong>Scientific Name:</strong> Caridea</p>
+  <p><strong>Scientific Name:</strong> <em>Caridea</em></p>
   <p><strong>Class:</strong> Crustacea</p>
   <p><strong>Habitat:</strong> Freshwater</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 
 <div class="animal-card" data-name="Barnacle" data-class="Crustacea" data-danger="None" data-habitat="Rocks">
-  <img src="images/barnacle.jpg" alt="Barnacle">
+  <img src="images/barnacles.jpg" alt="Barnacle">
   <h3>Barnacle</h3>
-  <p><strong>Scientific Name:</strong> Cirripedia</p>
+  <p><strong>Scientific Name:</strong> <em>Cirripedia</em></p>
   <p><strong>Class:</strong> Crustacea</p>
   <p><strong>Habitat:</strong> Rocks</p>
   <p><strong>Danger Level:</strong> None</p>
 </div>
 
 <div class="animal-card" data-name="Hermit Crab" data-class="Crustacea" data-danger="Low" data-habitat="Beaches">
-  <img src="images/hermit_crab.jpg" alt="Hermit Crab">
+  <img src="images/hermit crab.jpg" alt="Hermit Crab">
   <h3>Hermit Crab</h3>
-  <p><strong>Scientific Name:</strong> Paguroidea</p>
+  <p><strong>Scientific Name:</strong> <em>Paguroidea</em></p>
   <p><strong>Class:</strong> Crustacea</p>
   <p><strong>Habitat:</strong> Beaches</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
 
 <div class="animal-card" data-name="Ghost Crab" data-class="Crustacea" data-danger="Low" data-habitat="Beaches">
-  <img src="images/ghost_crab.jpg" alt="Ghost Crab">
+  <img src="images/Ghost Crab.jpg" alt="Ghost Crab">
   <h3>Ghost Crab</h3>
-  <p><strong>Scientific Name:</strong> Ocypode quadrata</p>
+  <p><strong>Scientific Name:</strong> <em>Ocypode quadrata</em></p>
   <p><strong>Class:</strong> Crustacea</p>
   <p><strong>Habitat:</strong> Beaches</p>
   <p><strong>Danger Level:</strong> Low</p>
 </div>
-
 </section>
 
-<!-- Floating Trivia Button -->
-  <button id="show-trivia" class="floating-btn">Test Your Animal Knowledge!</button>
-
-
-
-
-
-
-<!-- Trivia Section -->
 <section id="trivia-section">
-     
-    <div class="trivia-card hidden">
-        <h2 id="trivia-question">Trivia Question?</h2>
-        <div id="trivia-options" class="options-container"></div>
-        <p id="trivia-feedback"></p>
-        <button id="next-trivia">Next Question</button>
-    </div>
+  <div class="trivia-card">
+    <h2>Animal Trivia</h2>
+    <p id="trivia-question">Click the button to get a trivia question!</p>
+    <div class="options-container" id="options-container"></div>
+    <p id="trivia-feedback"></p>
+    <button class="floating-btn" id="trivia-btn">Trivia Time!</button>
+  </div>
 </section>
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Animal Kingdom. All rights reserved.</p>
+    <p>Built with 💚 for curious minds and young explorers.</p>
+  </div>
+</footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
